@@ -3,4 +3,4 @@ This is the repository for the Final Project for the 2019 Accelerated Summer Cod
 
 Names:
 Ronak Ramachandran
-Neel Kulkarni
+Max Kampel
