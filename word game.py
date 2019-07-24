@@ -6,3 +6,7 @@ if user_word.startswith(last_letter):
     score = score+1
     print('score=')
     print(score)
+else:
+    print('score=')
+    print(score)
+    
