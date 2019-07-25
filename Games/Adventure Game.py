@@ -31,7 +31,7 @@ else:
         game = o
 
 print ("Now you are crossing the valley of shame")
-c = int(input("You have two choices. Go to the lake and fetch some water -> 1. Or you can head on to find shelter before it gets dark -> 2.
+c = int(input("You have two choices. Go to the lake and fetch some water -> 1. Or you can head on to find shelter before it gets dark -> 2."))
 
 if c == 1:
     if x == 1:
@@ -60,14 +60,14 @@ elif w == 1:
     print("Wow, surprisingly, you made it through the night. Your decision to keep supplies spared you, you think as you drink the refreshing water")
 
 print("You finally make it to the arc of wisdom")
-    if q == 1:
-        print ("The God of Thunder, the one who sent you on this quest reminds you to not be mindless")
-    else:
-        print ("You have almost reached the Valley of Death")
+if q == 1:
+    print ("The God of Thunder, the one who sent you on this quest reminds you to not be mindless")
+else:
+    print ("You have almost reached the Valley of Death")
 
 print ("You are ambushed by the three musketeers, the most dangerous gunmen in the island")
 
-e = int(input("Do you wish to fight back -> 1 , or make a run for it -> 2?")
+e = int(input("Do you wish to fight back -> 1 , or make a run for it -> 2?"))
 
 if e == 1:
     if w == 1:
@@ -101,7 +101,7 @@ if a == 2:
     v = int(input("He comes at you, do you decide to dodge -> 1, or counter ->"))
 else:
     print("You finish him, you win!")
-    game = win!
+    game = win
 
 if v == 1:
     print ("Dodge his attack, and his lighting sword gets stuck in the ground, and you decide to finish him. You win!")
