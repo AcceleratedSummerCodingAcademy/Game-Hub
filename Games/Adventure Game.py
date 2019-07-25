@@ -37,7 +37,7 @@ if c == 1:
     if x == 1:
         q = 1
         print ("You already have some water, you drink some and decide to foolishly lie down, and you start resting")
-    else:
+    elif x == 2:
         print ("You start your trek to the lake but it starts getting dark")
         q = 2
 else:
