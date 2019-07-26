@@ -31,7 +31,7 @@ def play_game():
             print ("You were spared, leaving some water, now you must look for a place to sleep")
         elif x == 2:
             print ("You didn't get your drink. Game over")
-            game = o
+            print ("Game Over")
             return
     else:
         print ("You begin to run away")
@@ -56,9 +56,9 @@ def play_game():
         print ("You begin your to the Valley of Death")
         if x == 1:
            w = int(input(print("The extra weight slows you down so you lie down without finding shelter. Do you still wish to throw away your supplies somewhere in the distance? Yes -> 1. No -> 2.")))
-        else:
+        elif x == 2:
             print("You find shelter and lie down for the night")
-            w = 2
+            
             
 
     if q == 1:
