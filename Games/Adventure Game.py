@@ -1,5 +1,13 @@
 #Neel Kulkarni 2019
 
+x = 9
+n = 9
+c = 9
+e = 9
+w = 9
+q = 9
+v = 9
+
 print ("Welcome, hero, you are the only one who can save us now. The evil monster has ravaged this island, killing hundreds. Please stop him quickly")
 print ("Now, you must head to the Valley of Death, I have given you a sword to fight enemies, goodluck!")
 
@@ -38,8 +46,9 @@ if c == 1:
         q = 1
         print ("You already have some water, you drink some and decide to foolishly lie down, and you start resting")
     elif x == 2:
-        print ("You start your trek to the lake but it starts getting dark")
         q = 2
+        print ("You start your trek to the lake but it starts getting dark")
+        
 else:
     print ("You begin your to the Valley of Death")
     if x == 1:
@@ -47,13 +56,14 @@ else:
     else:
         print("You find shelter and lie down for the night")
         w = 2
+        
 
 if q == 1:
     print ("You awake to find yourself well... alive!")
 elif q == 2:
     print ("You get water and somehow make it through the night")
 
-if w == 2:
+elif w == 2:
     print("You wake and suddenly feel the urge for water, but upon realizing you don't have any, you begin to feel wierd and...")
     game = o
 elif w == 1:
