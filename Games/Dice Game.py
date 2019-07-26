@@ -93,8 +93,9 @@ o    o''')
     print('#'*player_moves)
     print("Bot Score: " + str(bot_moves))
     print('#'*bot_moves)
-    
-if player_moves >= 36:
+if player_moves >= 36 and bot_moves >= 36:
+    print("It's a tie!")
+elif player_moves >= 36:
     print("You win!")
 elif bot_moves >= 36:
     print("You lose!")
