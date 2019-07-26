@@ -6,24 +6,45 @@ import time
 
 #Get all the names of the games in one list called modules
 module_paths = glob.glob(join(dirname(__file__), "Games", "*.py"))
-modules = [ basename(f)[:-3] for f in module_paths if isfile(f)]
+module_names = [ basename(f)[:-3] for f in module_paths if isfile(f)]
+modules = []
 
-#Create the main menu prompt with all games listed and numbered
-menu_prompt = '''Which function would you like to test?
+#Create the main menu prompt with all games listed and numbered, and create a list that will hold the actual module objects
+menu_prompt = '''Which game would you like to play?
 '''
-for i in range(len(modules)):
-    menu_prompt = menu_prompt + '<' + str(i+1) + '> ' + modules[i] + '\n'
+for i in range(len(module_names)):
+    menu_prompt = menu_prompt + '<' + str(i+1) + '> ' + module_names[i] + '\n'
+    modules.append(None)
 menu_prompt = menu_prompt + 'Please enter the number for your game, or press enter to exit.\n>>> '
 
+print('''===============================================
+             Welcome to
+             ╔═╗╔═╗╔╦╗╔═╗╦ ╦╦ ╦╔╗ 
+             ║ ╦╠═╣║║║║╣ ╠═╣║ ║╠╩╗
+             ╚═╝╩ ╩╩ ╩╚═╝╩ ╩╚═╝╚═╝
+===============================================
+''')
+
+#Keep asking the user to play a new game unless they enter invalid input
 while True:
     user_in = input(menu_prompt)
     try:
         user_in = int(user_in)
+        while user_in > len(modules) or user_in < 1:
+            user_in = input("That was not a valid response, please try again.\n>>> ")
+            user_in = int(user_in)
     except ValueError:
-        print("Goodbye for now!")
-        break
+        user_in = input("Are you sure you want to exit GameHub? (Y/n)\n>>> ")
+        if user_in != 'n':
+            print("Goodbye for now!")
+            break
+        continue
 
-    importlib.import_module('Games.' + modules[user_in - 1])
+    if modules[user_in - 1] == None:
+        module = importlib.import_module('Games.' + module_names[user_in - 1])
+        modules[user_in - 1] = module
+    else:
+        importlib.reload(modules[user_in - 1])
     
     time_increments = 22
     total_wait_time = 3
