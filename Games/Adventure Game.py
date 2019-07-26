@@ -85,7 +85,7 @@ if e == 1:
     elif q == 2:
         print ("You start running, but one of the musketeers shoots you.")
         game = o
-else:
+elif e == 2:
     if w == 1:
         print ("Your supplies make your fighting sluggish, you die.")
         game = o
